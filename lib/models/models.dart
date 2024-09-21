@@ -19,12 +19,14 @@ class Nivel {
   final String nombre;
   final List<Pregunta> preguntas;
   int estrellasObtenidas; // Agrega esta propiedad
+  bool desbloqueado; // Nueva propiedad para manejar el estado bloqueado
 
   Nivel({
     required this.id,
     required this.nombre,
     required this.preguntas,
     this.estrellasObtenidas = 0, // Inicializa en 0 por defecto
+    this.desbloqueado=true
   });
 }
 

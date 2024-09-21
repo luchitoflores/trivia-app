@@ -12,6 +12,7 @@ final List<Materia> materias = [
           Nivel(
             id: 1,
             nombre: 'Nivel 1',
+            desbloqueado: false,
             preguntas: [
               Pregunta(
                 id: 1,

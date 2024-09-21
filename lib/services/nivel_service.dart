@@ -12,4 +12,17 @@ class NivelService {
     final prefs = await SharedPreferences.getInstance();
     return prefs.getInt('estrellas_$nivelId') ?? 0;
   }
+
+static Future<void> guardarDesbloqueo(String nivelNombre, bool desbloqueado) async {
+    final prefs = await SharedPreferences.getInstance();
+    await prefs.setBool(nivelNombre + '_desbloqueado', desbloqueado);
+  }
+
+  static Future<bool> obtenerDesbloqueo(String nivelNombre) async {
+    final prefs = await SharedPreferences.getInstance();
+    return prefs.getBool(nivelNombre + '_desbloqueado') ?? false;
+  }
+
+  
+
 }
